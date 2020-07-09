@@ -1,6 +1,6 @@
 <template>
     <div>
-        <van-nav-bar title="登录页面" left-text="返回" left-arrow />
+        <van-nav-bar title="项目登录页面" left-text="返回" left-arrow />
         <div class="body">
             <!-- 手机号 -->
             <van-field v-model="mobile" placeholder="手机号码" class="inp" right-icon="phone-circle-o" />
