@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import store from '@/store/index'
+
 Vue.config.productionTip = false
 //引入vant组件信息
 import vant from "vant";
@@ -26,6 +28,7 @@ router.beforeEach((to,from,next)=>{  //全局路由守卫
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
