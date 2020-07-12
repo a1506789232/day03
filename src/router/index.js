@@ -9,6 +9,8 @@ import four from '@/views/four'
 import home from '@/views/home'
 import cutList from '@/views/list/cutList'
 import shopList from '@/views/list/shopList'
+import fenleiX from '@/views/goods/fenleiX'
+import search from '@/views/goods/search'
 
 Vue.use(Router)
 
@@ -91,6 +93,24 @@ export default new Router({
       component: shopList,
       meta: {
         title: "商品推荐页面"
+      }
+    }
+    ,
+    {  //分类详情
+      path: '/fenleiX',
+      name: 'fenleiX',
+      component: fenleiX,
+      meta: {
+        title: "分类商品详情页面"
+      }
+    }
+    ,
+    {  //搜索页面
+      path: '/search',
+      name: 'search',
+      component: search,
+      meta: {
+        title: "搜索页面"
       }
     }
   ]

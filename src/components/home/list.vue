@@ -1,6 +1,5 @@
 <template>
   <div class="renqi">
-      <p class="p">人气推荐&nbsp;></p>
     <ul>
       <li v-for="(item,index) in man" :key="index">
         <img :src="item.pic" alt />

@@ -3,8 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
+import axios from '@/utils/request'
 import store from '@/store/index'
+
 
 Vue.config.productionTip = false
 //引入vant组件信息

@@ -9,7 +9,7 @@
       <!-- 精选 -->
       <goods :goodList="goodList"></goods>
       <!-- 人气推荐 -->
-      
+      <p class="p">人气推荐&nbsp;></p>
       <list :man="man"></list>
      <div class="kong" style="height:50px;width:100%"></div>
       

@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <router-view/>
-    
+     <loading></loading>
   </div>
 </template>
 
 <script>
+import loading from "@/views/1/loading";
 export default {
   name: 'App',
   data(){
     return {
     }
+  },
+  components:{
+    loading
   }
 }
 </script>
