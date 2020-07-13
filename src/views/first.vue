@@ -68,7 +68,7 @@ export default {
       this.$axios("https://api.it120.cc/small4/cms/news/list").then(
         res => {
           this.goodList = res.data.data;
-          console.log(res.data.data)
+          // console.log(res.data.data)
         }
       );
     }
@@ -82,7 +82,7 @@ export default {
              return item.name.indexOf('测试') == -1
           })
           this.man = arr;
-          console.log(arr.splice(4))
+          // console.log(arr.splice(4))
         }
       );
     }

@@ -11,6 +11,9 @@ import cutList from '@/views/list/cutList'
 import shopList from '@/views/list/shopList'
 import fenleiX from '@/views/goods/fenleiX'
 import search from '@/views/goods/search'
+import shopXiang from '@/views/goods/shopXiang'
+import onlyX from '@/views/goods/onlyX'
+import details from '@/views/details/details'
 
 Vue.use(Router)
 
@@ -111,6 +114,33 @@ export default new Router({
       component: search,
       meta: {
         title: "搜索页面"
+      }
+    }
+    ,
+    {  //文章页面
+      path: '/shopXiang',
+      name: 'shopXiang',
+      component: shopXiang,
+      meta: {
+        title: "详情页面"
+      }
+    }
+    ,
+    {  //文章详情页面
+      path: '/onlyX',
+      name: 'onlyX',
+      component: onlyX,
+      meta: {
+        title: "文章详情页面"
+      }
+    }
+    ,
+    {  //商品详情页面
+      path: '/details',
+      name: 'details',
+      component: details,
+      meta: {
+        title: "商品详情页面"
       }
     }
   ]

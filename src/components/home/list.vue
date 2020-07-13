@@ -1,7 +1,7 @@
 <template>
   <div class="renqi">
     <ul>
-      <li v-for="(item,index) in man" :key="index">
+      <li v-for="(item,index) in man" :key="index" @click="jumpX(item)">
         <img :src="item.pic" alt />
         <div>
           <p>{{ item.name }}</p>
@@ -21,7 +21,15 @@ export default {
   props: ["man"],
   created() {},
   mounted() {},
-  methods: {}
+  methods: {
+    jumpX(item){
+        console.log(item.id)
+        this.$router.push({
+          path:'/details',
+          query:{id:item.id}
+        })
+    }
+  }
 };
 </script>
 

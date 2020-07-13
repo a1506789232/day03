@@ -25,10 +25,11 @@
                <p>砍价</p>
             </router-link>
           <!-- </li> -->
-          <li style="width:25%;text-align:center;">
-            <van-icon name="column" :size="50"  color="red"/>
-            <p>专栏</p>
-          </li>
+            <router-link tag="li" to="/shopXiang" style="width:25%;text-align:center;">
+                <van-icon name="column" :size="50"  color="red"/>
+                <p>专栏</p>
+            </router-link>
+
         </ul>
       </header>
 </template>
