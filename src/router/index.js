@@ -4,7 +4,7 @@ import zc from '@/views/login/zc'
 import dl from '@/views/login/dl'
 import first from '@/views/first'
 import two from '@/views/two'
-import three from '@/views/three'
+import shopcar from '@/views/shopcar'
 import four from '@/views/four'
 import home from '@/views/home'
 import cutList from '@/views/list/cutList'
@@ -46,11 +46,11 @@ export default new Router({
         }
         ,
         {
-          path: '/three',
-          name: 'three',
-          component: three,
+          path: '/shopcar',
+          name: 'shopcar',
+          component: shopcar,
           meta: {
-            title: "严选商城登录页"
+            title: "严选商城购物车页"
           }
         }
         ,

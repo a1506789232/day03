@@ -5,7 +5,7 @@
       <van-tabbar :fixed="true" route>
         <van-tabbar-item icon="home-o" to="/first">首页</van-tabbar-item>
         <van-tabbar-item icon="apps-o" to="/two">分类</van-tabbar-item>
-        <van-tabbar-item icon="shopping-cart-o" to="/three">购物车</van-tabbar-item>
+        <van-tabbar-item icon="shopping-cart-o" to="/shopcar">购物车</van-tabbar-item>
         <van-tabbar-item icon="user-o" to="/four">个人</van-tabbar-item>
       </van-tabbar>
     </div>

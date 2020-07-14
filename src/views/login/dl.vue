@@ -1,6 +1,6 @@
 <template>
     <div>
-        <van-nav-bar title="项目登录页面" left-text="返回" left-arrow />
+        <van-nav-bar title="项目登录页面" left-text="返回" left-arrow @click-left="back"/>
         <div class="body">
             <!-- 手机号 -->
             <van-field v-model="mobile" placeholder="手机号码" class="inp" right-icon="phone-circle-o" />
@@ -45,6 +45,9 @@ export default {
 
     },
     methods: {
+        back(){
+           this.$router.back()
+        },
        btn(){
            if(this.mobile=="" || this.pwd==""){
                this.$toast.fail('请完善信息')
@@ -66,7 +69,7 @@ export default {
                }
                console.log(res.data.data)
                local.set('徐海峰',res.data.data,true)
-               this.$router.push('/')
+               this.$router.back()
             //    this.$toast.success('登录成功')
            })
        }
