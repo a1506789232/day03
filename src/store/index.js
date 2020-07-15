@@ -12,7 +12,11 @@ export default new vuex.Store({
       loading:true,
       count:'111',
       cartList:[],
-      nums:0
+      nums:0,
+      submitList:[], //checekd为true的数据
+      subMoney:0, //为true的总价
+      dingdan:"", // 订单号
+      city:{}  //地址
     },
     mutations:{
          loadingAdimin(state,item){
@@ -30,6 +34,17 @@ export default new vuex.Store({
          },
          fuzhi(state,list){
                state.cartList = list
+         },
+         submitC(state,allPrice){
+             let list  = state.cartList.filter(item=>{
+                  return item.checked
+             })
+             state.submitList = list
+             state.subMoney = allPrice
+         },
+         dingdan(state,txt){
+              state.dingdan = txt.orderNumber
+               state.city  = txt.city
          }
          
     },

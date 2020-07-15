@@ -22,7 +22,7 @@
     </ul>
 
     <!-- 下单 -->
-    <van-submit-bar :price="allPrice" button-text="提交订单">
+    <van-submit-bar :price="allPrice" button-text="提交订单" @submit="sub">
       <van-checkbox v-model="checked" @click="allC">全选</van-checkbox>
     </van-submit-bar>
   </div>
@@ -56,6 +56,13 @@ export default {
                   }
              })
         
+    },
+    sub(){
+        this.$store.commit('submitC',this.allPrice)
+        this.$toast.loading('正在加载订单')
+        setTimeout(()=>{
+           this.$router.push('/submit')
+        },2000)
     }
   },
   watch:{

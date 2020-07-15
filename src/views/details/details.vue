@@ -38,6 +38,7 @@
       :goods="goods"
       @add-cart="addCart"
       @stepper-change="numCart"
+      @sku-selected="skuSelected"
     />
 
 
@@ -96,6 +97,7 @@ export default {
         //sku的图片
         nums:1, //默认商品数量
         arr:[],//添加商品到vuex组件中要传入到vuex的数组
+        guige:"", //选择商品的规格
       };
 
   },
@@ -163,6 +165,7 @@ export default {
         obj.name = this.present.name
         obj.checked = true
         obj.pic = this.present.pic
+        obj.propertyId = this.guige
         this.$store.commit('jumpShop',obj)
         this.show = false
 
@@ -174,6 +177,9 @@ export default {
       this.$router.push({
         path:'/shopcar'
       })
+    },//选择商品规格时触发
+    skuSelected(value){
+          this.guige = `${value.skuValue.propertyId}:${value.skuValue.id}`
     }
   }
 };

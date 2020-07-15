@@ -14,6 +14,8 @@ import search from '@/views/goods/search'
 import shopXiang from '@/views/goods/shopXiang'
 import onlyX from '@/views/goods/onlyX'
 import details from '@/views/details/details'
+import submit from '@/views/details/submit'
+import pay from '@/views/details/pay'
 
 Vue.use(Router)
 
@@ -141,6 +143,22 @@ export default new Router({
       component: details,
       meta: {
         title: "商品详情页面"
+      }
+    },
+    {  //提交订单页面
+      path: '/submit',
+      name: 'submit',
+      component: submit,
+      meta: {
+        title: "提交订单页面"
+      }
+    },
+    {  //支付页面
+      path: '/pay',
+      name: 'pay',
+      component: pay,
+      meta: {
+        title: "支付页面"
       }
     }
   ]
