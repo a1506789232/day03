@@ -16,7 +16,8 @@ export default new vuex.Store({
       submitList:[], //checekd为true的数据
       subMoney:0, //为true的总价
       dingdan:"", // 订单号
-      city:{}  //地址
+      city:{},  //地址
+      cutId:[] //砍价id
     },
     mutations:{
          loadingAdimin(state,item){
@@ -45,6 +46,9 @@ export default new vuex.Store({
          dingdan(state,txt){
               state.dingdan = txt.orderNumber
                state.city  = txt.city
+         },
+         cutXiang(state,list){
+             state.cutId = list
          }
          
     },

@@ -23,7 +23,6 @@ export default {
   mounted() {},
   methods: {
     jumpX(item){
-        console.log(item.id)
         this.$router.push({
           path:'/details',
           query:{id:item.id}

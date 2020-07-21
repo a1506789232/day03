@@ -56,6 +56,8 @@ export default {
     sList() {
       this.$axios("https://api.it120.cc/small4/shop/goods/kanjia/list").then(
         res => {
+          console.log(res.data.data.result)
+          this.$store.commit('cutXiang',res.data.data.result)
           let id = Object.keys(res.data.data.goodsMap).splice(-3)
           id.forEach(item=>{
                this.shopList.push(res.data.data.goodsMap[item])

@@ -1,14 +1,14 @@
 <template>
   <div class="good">
     <p class="p">精选主题&nbsp;></p>
-    <van-swipe :loop="false" :width="300" class="txt" :show-indicators="false">
+    <van-swipe :loop="false" :width="300" class="txt" :show-indicators="false" >
       <van-swipe-item
         v-for="(item,index) in goodList"
         :key="index"
         style="margin:0 10px"
         class="good_li"
       >
-        <div style="height:198px;">
+        <div style="height:198px;" @click="jump">
           <img :src="item.pic" alt />
         </div>
         <p>{{ item.title }}</p>
@@ -26,7 +26,11 @@ export default {
   props:["goodList"],
   created() {},
   mounted() {},
-  methods: {}
+  methods: {
+    jump(){
+      this.$router.push('/shopXiang')
+    }
+  }
 };
 </script>
 

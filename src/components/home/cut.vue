@@ -1,7 +1,7 @@
 <template>
   <div class="con">
     <ul>
-      <li class="news" v-for="(item,index) in shopList" :key="index">
+      <li class="news" v-for="(item,index) in shopList" :key="index" @click="cutDetails(item)">
         <div class="newsLeft">
           <img :src="item.pic" alt />
         </div>
@@ -36,7 +36,17 @@ export default {
   props:["shopList"],
   created() {},
   mounted() {},
-  methods: {}
+  methods: {
+    cutDetails(item){
+         console.log(item.id)
+        //  this.$axios({url:'https://api.it120.cc/small4/shop/goods/detail',params:{id:item.id}}).then(res=>{
+              this.$router.push({
+                 path:'/cutDetails',
+                 query:{id:item.id}
+              })
+        //  })
+    }
+  }
 };
 </script>
 

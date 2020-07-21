@@ -5,7 +5,7 @@ import dl from '@/views/login/dl'
 import first from '@/views/first'
 import two from '@/views/two'
 import shopcar from '@/views/shopcar'
-import four from '@/views/four'
+import me from '@/views/me'
 import home from '@/views/home'
 import cutList from '@/views/list/cutList'
 import shopList from '@/views/list/shopList'
@@ -16,6 +16,12 @@ import onlyX from '@/views/goods/onlyX'
 import details from '@/views/details/details'
 import submit from '@/views/details/submit'
 import pay from '@/views/details/pay'
+import cutDetails from '@/views/details/cutDetails'
+import cutsure from '@/views/details/cutsure'
+import detailsFen from '@/views/details/detailsFen'
+import myorder from '@/views/order/myorder'
+import localList from '@/views/location/localList'
+import localCreate from '@/views/location/localCreate'
 
 Vue.use(Router)
 
@@ -57,9 +63,9 @@ export default new Router({
         }
         ,
         {
-          path: '/four',
-          name: 'four',
-          component: four,
+          path: '/me',
+          name: 'me',
+          component: me,
           meta: {
             title: "严选商城登录页"
           }
@@ -159,6 +165,60 @@ export default new Router({
       component: pay,
       meta: {
         title: "支付页面"
+      }
+    }
+    ,
+    {  //砍价详情页面
+      path: '/cutDetails',
+      name: 'cutDetails',
+      component: cutDetails,
+      meta: {
+        title: "砍价详情页面"
+      }
+    }
+    ,
+    {  //确认砍价页面
+      path: '/cutsure',
+      name: 'cutsure',
+      component: cutsure,
+      meta: {
+        title: "确认砍价页面"
+      }
+    }
+    ,
+    {  //拆分砍价页面
+      path: '/detailsFen',
+      name: 'detailsFen',
+      component: detailsFen,
+      meta: {
+        title: "拆分砍价页面"
+      }
+    }
+    ,
+    {  //我的订单页面
+      path: '/myorder',
+      name: 'myorder',
+      component: myorder,
+      meta: {
+        title: "我的订单"
+      }
+    }
+    ,
+    {  //我的地址页面
+      path: '/localList',
+      name: 'localList',
+      component: localList,
+      meta: {
+        title: "地址列表"
+      }
+    }
+    ,
+    {  //我的地址页面
+      path: '/localCreate',
+      name: 'localCreate',
+      component: localCreate,
+      meta: {
+        title: "新增地址"
       }
     }
   ]
